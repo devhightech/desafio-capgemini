@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,700;1,100;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="./assets/favicon.png" type="image/png">
+    <title>Cadastro de Anúncios</title>
+</head>
+
+<body>
+    <header>
+        <h1>📢 CADASTRO DE ANÚNCIOS</h1>
+    </header>
+
+    <main class="container">
+        <h2>ANÚNCIOS</h2>
+        <button href="#" onclick="Modal.open()" class="button new">
+            <i class="fas fa-plus-square"></i>
+            NOVO ANÚNCIO
+        </button>
+        <button onclick="createReport()" class="button new">
+            <i class="fas fa-file-alt"></i>
+            RELATÓRIO
+        </button>
+        <section id="transaction">
+            <table id="data-table">
+                <thead>
+                    <tr>
+                        <th>Anúncio</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--javascript-->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <div class="modal-overlay">
+        <div class="modal">
+            <div id="form">
+                <h2>Novo Anúncio</h2>
+                <form action="" onsubmit="Form.submit(event)">
+                    <div class="input-group">
+                        <label class="sr-only" for="ad">Anúncio</label>
+                        <!--p/ leitor de tela | acessibilidade-->
+                        <input type="text" name="ad" id="ad" placeholder="Nome do Anúncio" />
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="client">Cliente</label>
+                        <input type="text" name="client" id="client" placeholder="Nome do Cliente" />
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="start_date">Data de Início</label>
+                        <input type="date" name="start_date" id="start_date" />
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="end_date">Data de Término</label>
+                        <input type="date" name="end_date" id="end_date" />
+                    </div>
+                    <div class="input-group">
+                        <label class="sr-only" for="investment">Investimento (por dia)</label>
+                        <input type="number" step="0.01" name="investment" id="investment" placeholder="0,00" />
+                    </div>
+
+                    <div class="input-group actions">
+                        <a href="#" onclick="Modal.close()" class="button cancel">Cancelar</a>
+                        <button>Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="report">
+        <section id="information">
+            <table id="info-table">
+                <thead>
+                    <tr>
+                        <th>Anúncio</th>
+                        <th>Cliente</th>
+                        <th>Início</th>
+                        <th>Término</th>
+                        <th>Investimento (dia)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--javascript-->
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <footer>
+        <p>2021 - Divulga Tudo</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/2c36e9b7b1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
